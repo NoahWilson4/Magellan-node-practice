@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1.text-center= name
+	ul.pager
+		if previousVal !== -1
+			li.previous: a(href='#{previousVal}'): span.glyphicon.glyphicon-chevron-left
+		if nextVal !== -1
+			li.next: a(href='#{nextVal}'): span.glyphicon.glyphicon-chevron-right
+	img(src='#{mapURL}' width="80%").center-block
